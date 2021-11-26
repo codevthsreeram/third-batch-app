@@ -1,0 +1,26 @@
+<div class="card componentStyle">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>#Id</th>
+                <th>Invoice Number</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of lstInvoice">
+                <td>{{invoice.id}}</td>
+                <td>{{invoice.invoiceNumber}} </td>
+                <td>{{invoice.amount}}</td>
+                <td>{{invoice.date | date}}</td>
+                <td>
+                    <a [routerLink]="['/invoice',invoice.id]" class="btn btn-info"><i class="fas fa-eye"></i></a> &nbsp;
+                    <a class="btn btn-secondary"><i class="fas fa-pen-square"></i></a>&nbsp;
+                    <a class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

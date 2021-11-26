@@ -1,0 +1,65 @@
+<!-- <h1>No of courses {{ courses.length }}</h1> -->
+
+<!-- <h1>{{title}}</h1> -->
+
+<!-- <h1 [textContent]="title"></h1>
+
+<img height="200" width="300" src="{{imageUrl}}" />
+
+<img height="200" width="300" [src]="imageUrl" />
+
+<table border="1">
+    <tr>
+        <td [attr.colspan]="colspan" style="text-align: center;font-weight: bold;">
+            User Information
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            Email
+        </td>
+        <td>
+            Mobile Number
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Sreeram Kondagorla
+        </td>
+        <td>
+            codewithsreeram@gmail.com
+        </td>
+        <td>
+            7799667565
+        </td>
+    </tr>
+</table>
+<br>
+<input class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'white'" [class.active]="isActive"
+    (click)="showAlert()" type="button" value="Show Alert"> -->
+<div class="card componentStyle">
+    <h1 *ngIf="courses.length>0;">My Hidden Div Content</h1>
+
+    <div [hidden]="courses.length==0">List of courses</div>
+
+    <div [hidden]="courses.length>0">No courses yet</div>
+
+    <!-- <div *ngIf="courses.length>0; then listCourses else noCourses"></div>
+
+<ng-template #listCourses>
+    <div>List of courses</div>
+</ng-template>
+
+<ng-template #noCourses>
+    <div>No courses yet</div>
+</ng-template> -->
+
+    <ul>
+        <li *ngFor="let course of courses">
+            {{course}}
+        </li>
+    </ul>
+</div>

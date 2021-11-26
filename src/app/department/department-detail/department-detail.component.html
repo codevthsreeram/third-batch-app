@@ -1,0 +1,11 @@
+<div class="card componentStyle">
+    <div class="card text-center" *ngIf="deptModel$ | async as dept">
+        <div class="card-header">
+            Department Details
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{dept.name}}</h5>
+            <p class="card-text">Description : {{dept.description}}</p>
+        </div>
+    </div>
+</div>
