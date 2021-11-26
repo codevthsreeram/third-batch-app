@@ -1,10 +1,9 @@
 <div class="card componentStyle">
 
     <form (ngSubmit)="login()" [formGroup]="loginForm">
-        <div class="form-group">
-            <label for="txtUserName">User Name</label>
-            <input [(ngModel)]="authModel.userName" name="txtUserName" formControlName="userName" id='txtUserName'
-                type="text" class="form-control">
+        <div class="form-group mb-3">
+            <input placeholder="Username" [(ngModel)]="authModel.userName" name="txtUserName" formControlName="userName"
+                id='txtUserName' type="text" class="form-control">
             <div *ngIf="userName.touched && userName.invalid">
                 <div class="alert alert-danger" *ngIf="userName.errors.required">
                     Username is mandatory
@@ -17,15 +16,14 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="txtPassword">Password</label>
-            <input [(ngModel)]="authModel.password" name="txtPassword" formControlName="password" id='txtPassword'
-                type="password" class="form-control">
+        <div class="form-group mb-3">
+            <input placeholder="Password" [(ngModel)]="authModel.password" name="txtPassword" formControlName="password"
+                id='txtPassword' type="password" class="form-control">
             <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
                 Password is mandatory
             </div>
         </div>
-        <div style="margin-top: 5px;">
+        <div>
             <button class="btn btn-primary">Login</button>
         </div>
     </form>
