@@ -12,7 +12,6 @@ import { AuthService } from "./user/auth.service";
 
 export class LoginComponent {
     constructor(private authService: AuthService, private toastrService: ToastrService) {
-
     }
     authModel = new AuthModel();
     loginForm = new FormGroup(
