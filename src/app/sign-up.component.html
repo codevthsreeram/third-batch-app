@@ -14,7 +14,7 @@
         </div>
 
         <div class="form-group">
-            <label for="txtEmailAddress">Email Address</label>
+            <label for="txtEmailAddress">Email</label>
             <input formControlName="emailAddress" id='txtEmailAddress' type="text" class="form-control">
             <div *ngIf="emailAddress.touched && emailAddress.invalid">
                 <div class="alert alert-danger" *ngIf="emailAddress.errors.required">
